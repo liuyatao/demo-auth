@@ -27,7 +27,7 @@ public class OAuth2Configuration {
         @Override
         public void configure(HttpSecurity http) throws Exception {
 
-            http
+            http.antMatcher("/api/**")
                     .authorizeRequests()
                     .antMatchers("/hello/").permitAll()
                     .antMatchers("/secure/**").authenticated();

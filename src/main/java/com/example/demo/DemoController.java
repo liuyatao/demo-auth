@@ -13,4 +13,10 @@ public class DemoController {
     public String index(){
         return "index";
     }
+
+    @RequestMapping(value="/api/security")
+    @ResponseBody
+    public String security(){
+        return "security";
+    }
 }
